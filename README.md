@@ -1,42 +1,181 @@
-# Student Management System
+Student Management System
 
-A simple Java-based Student Management System developed using JDBC and MySQL.
+A full-stack Student Management System built using Java, JDBC, Spring Boot, Spring Data JPA, MySQL, HTML, CSS, and JavaScript.
 
-## Features
+🚀 Project Overview
 
-- Add a new student
-- View all students
-- Update a student's course
-- Delete a student
-- MySQL database connectivity using JDBC
+This project demonstrates the development of a Student Management System in three stages:
 
-## Technologies Used
+1. Java + JDBC + MySQL
+2. Spring Boot REST API + MySQL
+3. HTML/CSS/JavaScript Frontend + Spring Boot REST API + MySQL
+
+The final version allows users to add, view, update, and delete student records through a web browser.
+
+🛠️ Technologies Used
 
 - Java
 - JDBC
+- Spring Boot
+- Spring Data JPA
+- REST API
 - MySQL
+- HTML5
+- CSS3
+- JavaScript
+- Fetch API
 - Maven
 - IntelliJ IDEA
+- MySQL Workbench
 
-## Project Structure
+✨ Features
 
-- `Student.java` – Student model class
-- `StudentDAO.java` – Database operations
-- `DBConnection.java` – MySQL database connection
-- `Main.java` – Main menu and program execution
+- Add new students
+- View all students
+- Update student course
+- Delete students
+- Store student data in MySQL
+- RESTful API for CRUD operations
+- Web-based frontend
+- Frontend and backend integration using Fetch API
 
-## Database
+🏗️ Project Architecture
 
-The project uses a MySQL database named `student_db` with a `students` table.
+Web Browser
+     ↓
+HTML + CSS + JavaScript
+     ↓
+Fetch API
+     ↓
+Spring Boot REST API
+     ↓
+Spring Data JPA
+     ↓
+MySQL Database
 
-## How to Run
+📂 Project Structure
 
-1. Install Java and MySQL.
-2. Create the `student_db` database and `students` table.
-3. Configure the database connection locally.
-4. Open the project in IntelliJ IDEA.
-5. Run `Main.java`.
+StudentManagementSystem
+│
+├── src
+│   └── main
+│       └── java
+│           └── org.example
+│               ├── DBConnection.java
+│               ├── Main.java
+│               ├── Student.java
+│               └── StudentDAO.java
+│
+├── student-api
+│   └── student-api
+│       └── src
+│           ├── main
+│           │   ├── java
+│           │   │   └── com.example.student_api
+│           │   │       ├── Student.java
+│           │   │       ├── StudentRepository.java
+│           │   │       ├── StudentController.java
+│           │   │       └── StudentApiApplication.java
+│           │   │
+│           │   └── resources
+│           │
+│           └── test
+│
+├── StudentWeb
+│   └── index.html
+│
+├── database.sql
+├── pom.xml
+└── README.md
 
-## Author
+🔗 REST API Endpoints
 
-Padmasri
+Method| Endpoint| Description
+GET| "/api/students"| Get all students
+POST| "/api/students"| Add a new student
+PUT| "/api/students/{id}"| Update a student
+DELETE| "/api/students/{id}"| Delete a student
+
+🗄️ Database
+
+The project uses MySQL with a database named:
+
+student_db
+
+Main table:
+
+students
+
+The table stores:
+
+- ID
+- Name
+- Email
+- Course
+
+▶️ How to Run
+
+1. Set up MySQL
+
+Create the database and table using the SQL file:
+
+database.sql
+
+2. Run the Spring Boot Application
+
+Open the "student-api" project in IntelliJ IDEA and run:
+
+StudentApiApplication.java
+
+The REST API runs on:
+
+http://localhost:8081
+
+3. Open the Frontend
+
+Open:
+
+StudentWeb/index.html
+
+in a web browser.
+
+The frontend communicates with the Spring Boot REST API using JavaScript Fetch API.
+
+🔄 Application Flow
+
+User
+ ↓
+StudentWeb/index.html
+ ↓
+JavaScript Fetch API
+ ↓
+Spring Boot Controller
+ ↓
+Student Repository
+ ↓
+MySQL
+
+📌 Learning Outcomes
+
+Through this project, I practiced:
+
+- Core Java and JDBC
+- Object-Oriented Programming
+- Database connectivity
+- SQL and MySQL
+- Spring Boot
+- Spring Data JPA
+- REST API development
+- CRUD operations
+- HTML and CSS
+- JavaScript
+- Fetch API
+- Frontend-backend integration
+- Git and GitHub
+
+👩‍💻 Author
+
+Padma Sri Sanivada
+
+B.Tech – Electronics and Communication Engineering
+2026 Graduate
